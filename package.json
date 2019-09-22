@@ -1,0 +1,69 @@
+{
+  "name": "odd-mac",
+  "private": true,
+  "description": "Odd:Mac is a shell script which installs all the necessary software you need to turn your Mac into a productive power house for web & app development, especially optimised for Odd:Pub platform.",
+  "version": "0.0.0-development",
+  "author": "Odduse <info@odduse.com>",
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.3.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.4.3",
+    "@semantic-release/npm": "^5.1.15",
+    "@semantic-release/release-notes-generator": "^7.3.0",
+    "commitizen": "^4.0.3",
+    "husky": "^3.0.5",
+    "semantic-release": "^15.13.24"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      "@semantic-release/git"
+    ],
+    "branch": "master"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Odd-use/odd-mac"
+  },
+  "bugs": {
+    "url": "https://github.com/Odd-use/odd-mac/issues"
+  },
+  "keywords": [
+    "bash",
+    "shell"
+  ],
+  "license": "https://github.com/Odd-use/odd-mac/blob/master/LICENSE"
+}
