@@ -1,14 +1,14 @@
 language: node_js
-  cache:
-    npm: false
-  notification:
-    email: false
-  node_js:
-    - '12'
-  before_script:
-    - npm prune
-  after_success:
-    - npm run semantic-release
-  Branches:
-    except:
-      - /^v\d+\.\d+\.\d+$/
+cache:
+  npm: false
+notification:
+  email: false
+node_js:
+  - '12'
+before_script:
+  - npm prune
+after_success:
+  - npm run semantic-release
+Branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
