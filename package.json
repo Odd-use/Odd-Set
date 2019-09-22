@@ -2,7 +2,7 @@
   "name": "odd-mac",
   "private": true,
   "description": "Odd:Mac is a shell script which installs all the necessary software you need to turn your Mac into a productive power house for web & app development, especially optimised for Odd:Pub platform.",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "Odduse <info@odduse.com>",
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
